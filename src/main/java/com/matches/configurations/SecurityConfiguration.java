@@ -56,7 +56,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .cors()
                 .disable()
                 .authorizeRequests()
-                .mvcMatchers("/generate-token").permitAll()
+                .mvcMatchers("/api/login").permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtAuthenticacionEntryPoint)

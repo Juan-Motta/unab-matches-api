@@ -9,23 +9,22 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/team")
 public class TeamController {
 
     @Autowired
     private TeamService teamService;
 
-    @GetMapping("/")
+    @GetMapping("/api/team")
     public List<Team> getAllTeam() {
         return teamService.getAllTeam();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/team/{id}")
     public Team getTeamById(@PathVariable("id") Long id) throws Exception {
         return teamService.getTeamById(id);
     }
 
-    @PostMapping("/")
+    @PostMapping("/api/team")
     public Team saveUser(@RequestBody Team team) throws Exception {
         return teamService.saveTeam(team);
     }
