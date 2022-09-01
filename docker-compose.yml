@@ -5,7 +5,7 @@ services:
     image: app-springboot-postgresql
     build: ./
     ports:
-      - "8000:8000"
+      - "8000:8080"
     depends_on:
       - dbpostgresql
   dbpostgresql:

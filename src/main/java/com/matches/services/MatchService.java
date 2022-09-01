@@ -38,7 +38,7 @@ public class MatchService implements MatchServiceInterface {
 
     @Override
     public List<Match> getMatchList() {
-        return null;
+        return matchRepository.findAll();
     }
 
     @Override
